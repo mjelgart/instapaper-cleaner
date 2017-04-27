@@ -27,10 +27,26 @@ for url in targetURLs:
 targetURLs.close()
 
 for article in marks:
-    for target in url_counter.keys:
+    for target in url_counter.keys():
         if article.url.startswith(target):
-            url_counter[target]+=1
+            if url_counter[target] > int(config['DEFAULT']['MaxURLCount']):
 
-            if [url_counter[target]> config['DEFAULT']['MaxURLCount']
+                #delete this bookmark
+                article.delete()
 
+            url_counter[target] += 1
+
+
+     
+                    
+for target in url_counter.keys():
+    summary_string = ''
+    if url_counter[target] > config['DEFAULT']['MaxURLCount']:
+        summary_string= (str(url_counter[target]-config['DEFAULT']['MaxURLCount']) + ' articles deleted with url "'+target+'".')
+    else:
+        summary_string= '0 articles deleted with url "'+target+'".'
+        
+    log.info(summary_string)
+    print(summary_string)
+    
 
