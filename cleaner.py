@@ -1,3 +1,6 @@
+#!/usr/bin/env python3
+
+
 '''
 Main script that cleans the instapaper account.
 
