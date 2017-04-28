@@ -24,7 +24,7 @@ Cleans out old unread instapaper articles from same website.
 
 setup(
     name='instapaper-cleaner',
-    version='0.2.1',
+    version='1.0',
     
     description = 'Cleans out old unread instapaper articles from same website.',
     long_description=long_description,
@@ -35,7 +35,7 @@ setup(
     license='Apache',
 
     classifiers=[
-        'Development Status :: 3 - Alpha',
+        'Development Status :: 5 - Production',
         'Intended Audience :: Hobbyists',
         'License :: OSI Approved :: Apache License',
 

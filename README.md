@@ -6,7 +6,7 @@ Cleans out old unread instapaper articles from same website.
 Installation
 ------------
 
-From Source ::
+From source 
 
     $ git clone https://github.com/mjelgart/instapaper-cleaner.git
     $ cd instapaper-cleaner
@@ -24,7 +24,8 @@ For now, copy and paste them exactly as they appear. including the "https://" or
 
 Usage
 -----
-To run the tool ::
+To run the tool: 
+
     $ python cleaner.py
 
 A message will appear indicating how many articles were deleted if any. 
