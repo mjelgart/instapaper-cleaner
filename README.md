@@ -1,17 +1,34 @@
-# Instapaper-Cleaner
+Instapaper-Cleaner
+==================
 
 Cleans out old unread instapaper articles from same website.
 
-Place the URLs of the websites you'd like instapaper-cleaner to remove.
-Make sure you label this file "targetURLs.txt" once you have added the URLs.
+Installation
+------------
+
+From Source ::
+
+    $ git clone https://github.com/mjelgart/instapaper-cleaner.git
+    $ cd instapaper-cleaner
+    $ python setup.py install
+
+Configuration 
+-------------
+
+Rename "cleaner-example.cfg" to "instapaper-cleaner.cfg".
+Fill out that configuration file with the indicated values, including the number of articles you'd like to keep from the target websites.
+
+Then rename "targetURLs-example.txt" to "targetURLs.txt"
+Fill out a targetURLs.txt with the URLs you want to clean, based on the examples provided.
 For now, copy and paste them exactly as they appear. including the "https://" or "http://"
-Remember to also fill out a file named instapaper-cleaner.cfg based on the example: cleaner-example.cfg
 
+Usage
+-----
+To run the tool ::
+    $ python cleaner.py
 
+A message will appear indicating how many articles were deleted if any. 
 
-Fill out this configuration file with the indicated values.
-Don't forget to fill out a targetURLs.txt with the URLs you want to clean, based on the targetURLs-example.txt
-
-
+A more detailed log will appear entitled instapaper-cleaner.log
 
 Written in Python 3.5
