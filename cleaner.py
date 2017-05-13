@@ -42,17 +42,16 @@ for article in marks:
             if url_counter[target] > maxURLCount:
                 
                 #delete this bookmark
-                logging.info('Deleting article "'+article.title+'" with url '+article.url+'.')
+                logging.info('Deleting article "{0}" with url "{1}"'.format(article.title, article.url)) 
                 article.delete()
 
-     
-                    
+#Construct Summary String for logging.                    
 for target in url_counter.keys():
     summary_string = ''
     if url_counter[target] > maxURLCount:
-        summary_string= (str(url_counter[target]-maxURLCount) + ' articles deleted with url "'+target+'".')
+        summary_string= ('{0} articles deleted with url "{1}".'.format(url_counter[target]-maxURLCount, target))
     else:
-        summary_string= '0 articles deleted with url "'+target+'".'
+        summary_string= '0 articles deleted with url "{0}".'.format(target)
         
     logging.info(summary_string)
     print(summary_string)
