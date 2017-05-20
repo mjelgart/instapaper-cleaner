@@ -10,6 +10,7 @@ from instapaper import Instapaper as ipaper
 import configparser
 import logging
 
+
 logging.basicConfig(filename='instapaper-cleaner.log',level=logging.DEBUG)
 
 #Read in the configuration folder
@@ -29,15 +30,21 @@ marks = i.bookmarks(limit=100)
 #Read file of target URLs to clean
 targetURLs = open('targetURLs.txt', 'r')
 
+#Build url_counter dict, starting counts at 0
 url_counter= {}
-
 for url in targetURLs:
-    url_counter[url.strip()]=0
+    url = url.strip()
+    if url.startswith("http://"):
+        url = url[7:]
+    if url.startswith("https://"):
+        url = url[8:]
+    url_counter[url]=0
 targetURLs.close()
 
 for article in marks:
     for target in url_counter.keys():
-        if article.url.startswith(target):
+        #Check if article is from website targetted for cleaning
+        if article.url.count(target)==1:
             url_counter[target] += 1
             if url_counter[target] > maxURLCount:
                 
@@ -56,4 +63,5 @@ for target in url_counter.keys():
     logging.info(summary_string)
     print(summary_string)
     
+
 

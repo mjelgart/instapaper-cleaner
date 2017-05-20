@@ -20,7 +20,7 @@ Fill out that configuration file with the indicated values, including the number
 
 Then rename "targetURLs-example.txt" to "targetURLs.txt"
 Fill out a targetURLs.txt with the URLs you want to clean, based on the examples provided.
-For now, copy and paste them exactly as they appear. including the "https://" or "http://"
+Copy and paste them with or without the "https://" or "http://", it will not matter. 
 
 Usage
 -----
