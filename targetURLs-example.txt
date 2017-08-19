@@ -1,6 +1,5 @@
 # Place the URLs of the websites you'd like instapaper-cleaner to remove.
 # Make sure you label this file "targetURLs.txt" once you have added the URLs.
-# For now, copy and paste them exactly as they appear. including the "https://" or "http://"
 # Remember to also fill out a file named instapaper-cleaner.cfg based on the example: cleaner-example.cfg
 
 
